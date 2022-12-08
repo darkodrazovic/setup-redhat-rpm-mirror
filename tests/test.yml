@@ -1,0 +1,10 @@
+- name: Setup local Red Hat RPM mirror
+  hosts: all
+  become: yes
+  become_user: root
+  become_method: sudo
+  gather_facts: true
+  ignore_errors: no
+
+  roles:
+     - setup-redhat-rpm-mirror
